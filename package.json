@@ -19,7 +19,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "prettier": "prettier . --write",
+        "prettier": "prettier ./lib/index.mjs --write",
         "preview": "vite preview"
     },
     "devDependencies": {
