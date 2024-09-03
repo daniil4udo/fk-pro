@@ -2,20 +2,20 @@
 
 FormKit Pro is a first party library of professional grade "synthetic" inputs for the FormKit form building framework. This growing list of inputs currently includes:
 
--   Autocomplete
--   Currency
--   Datepicker
--   Dropdown
--   Colorpicker
--   Mask
--   Rating
--   Repeater
--   Slider
--   Taglist
--   Toggle
--   Toggle Buttons
--   Transfer List
--   Slider
+- Autocomplete
+- Currency
+- Datepicker
+- Dropdown
+- Colorpicker
+- Mask
+- Rating
+- Repeater
+- Slider
+- Taglist
+- Toggle
+- Toggle Buttons
+- Transfer List
+- Slider
 
 ## Usage
 
@@ -31,23 +31,23 @@ FormKit Pro is a FormKit plugin that is installed just like any other plugin. To
 
 ```js
 // main.js
-import { createApp } from 'vue';
-import { plugin, defaultConfig } from '@formkit/vue';
-import { createProPlugin, autocomplete } from '@formkit/pro';
-import App from 'App.vue';
+import { createApp } from 'vue'
+import { plugin, defaultConfig } from '@formkit/vue'
+import { createProPlugin, autocomplete } from '@formkit/pro'
+import App from 'App.vue'
 
 const pro = createProPlugin('{your-project-key}', {
-    autocomplete,
-});
+  autocomplete,
+})
 
-const app = createApp(App);
+const app = createApp(App)
 
 app.use(
-    plugin,
-    defaultConfig({
-        plugins: [pro],
-    })
-);
+  plugin,
+  defaultConfig({
+    plugins: [pro],
+  })
+)
 ```
 
 ## License

@@ -1,55 +1,55 @@
 {
-    "name": "@formkit/pro",
-    "version": "0.127.0",
-    "description": "FormKit Pro — Form inputs and tools for high quality forms.",
-    "main": "index.cjs",
-    "module": "index.mjs",
-    "types": "index.d.ts",
-    "repository": "git@github.com:formkit/formkit.git",
-    "author": "FormKit <info@formkit.com>",
-    "license": "SEE LICENSE IN LICENSE.md",
-    "exports": {
-        ".": {
-            "import": "./index.mjs",
-            "require": "./index.cjs",
-            "types": "./index.d.ts",
-            "default": "./index.mjs"
-        },
-        "./genesis": {
-            "import": "./genesis.css",
-            "require": "./genesis.css",
-            "default": "./genesis.css"
-        }
+  "name": "@formkit/pro",
+  "version": "0.127.0",
+  "description": "FormKit Pro — Form inputs and tools for high quality forms.",
+  "main": "index.cjs",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "repository": "git@github.com:formkit/formkit.git",
+  "author": "FormKit <info@formkit.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs",
+      "types": "./index.d.ts",
+      "default": "./index.mjs"
     },
-    "contributors": [
-        "Justin Schroeder <justin@formkit.com>",
-        "Sasha Milenkovic <sasha@formkit.com>",
-        "Andrew Boyd <andrew@formkit.com>"
-    ],
-    "keywords": [
-        "forms",
-        "autocomplete",
-        "toggle",
-        "dropdown",
-        "taglist",
-        "datepicker",
-        "mask",
-        "repeater",
-        "colorpicker",
-        "slider",
-        "transferlist",
-        "rating",
-        "togglebuttons",
-        "validation",
-        "vue"
-    ],
-    "dependencies": {
-        "@formkit/drag-and-drop": "^0.0.38",
-        "@formkit/tempo": "^0.1.1"
-    },
-    "peerDependencies": {
-        "@formkit/core": "^1.6.5",
-        "@formkit/inputs": "^1.6.5"
-    },
-    "type": "module"
+    "./genesis": {
+      "import": "./genesis.css",
+      "require": "./genesis.css",
+      "default": "./genesis.css"
+    }
+  },
+  "contributors": [
+    "Justin Schroeder <justin@formkit.com>",
+    "Sasha Milenkovic <sasha@formkit.com>",
+    "Andrew Boyd <andrew@formkit.com>"
+  ],
+  "keywords": [
+    "forms",
+    "autocomplete",
+    "toggle",
+    "dropdown",
+    "taglist",
+    "datepicker",
+    "mask",
+    "repeater",
+    "colorpicker",
+    "slider",
+    "transferlist",
+    "rating",
+    "togglebuttons",
+    "validation",
+    "vue"
+  ],
+  "dependencies": {
+    "@formkit/drag-and-drop": "^0.0.38",
+    "@formkit/tempo": "^0.1.1"
+  },
+  "peerDependencies": {
+    "@formkit/core": "^1.6.5",
+    "@formkit/inputs": "^1.6.5"
+  },
+  "type": "module"
 }
