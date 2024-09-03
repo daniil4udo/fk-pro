@@ -1,4 +1,4 @@
-import { FormKitProInput } from '../index.mjs';
+import { FormKitProInput } from '@formkit/pro';
 import { default as sliderFeature } from '../features/slider';
 import {
     outer,

@@ -1,6 +1,6 @@
 import { defaultIcon } from '@formkit/inputs';
 import newRate from '../features/rate';
-import { FormKitProInput } from '../index.mjs';
+import { FormKitProInput } from '@formkit/pro';
 import {
     outer,
     wrapper,

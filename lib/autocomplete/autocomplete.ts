@@ -1,5 +1,5 @@
 import { options, defaultIcon, localize } from '@formkit/inputs';
-import { FormKitProInput } from '../index.mjs';
+import { FormKitProInput } from '@formkit/pro';
 import {
     outer,
     wrapper,

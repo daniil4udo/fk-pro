@@ -1,4 +1,4 @@
-import { FormKitProInput } from '../index.mjs';
+import { FormKitProInput } from '@formkit/pro';
 import { options as optionsCore } from '@formkit/inputs';
 import { $if } from '../compose';
 import {
