@@ -1583,7 +1583,7 @@ declare module '@formkit/inputs' {
       value?: string | number
       label?: string
       disabled?: Bool
-      unit: Units
+      unit?: Units
       displayLocale?: string
       decimals?: Bool | number | string
       minDecimals?: number | string
@@ -1593,7 +1593,6 @@ declare module '@formkit/inputs' {
       valueUnit?: Units
       valueUnitDecimals?: number
       unitDisplay?: 'long' | 'short' | 'narrow'
-      unitFormatting: boolean | string
     }
 
     datepicker: {
