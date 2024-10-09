@@ -177,7 +177,7 @@ export declare function createBaseSections(createSection: SectionFactory): {
     outer: FormKitProSection<true>;
     wrapper: FormKitProSection<false>;
     inner: FormKitProSection<false>;
-    icon: (sectionKey: string, el?: string | undefined) => () => FormKitSchemaExtendableSection;
+    icon: (sectionKey: string, el?: string) => () => FormKitSchemaExtendableSection;
     label: FormKitProSection<false>;
     prefix: FormKitProSection<false>;
     suffix: FormKitProSection<false>;
@@ -401,6 +401,7 @@ export declare interface FormKitAutocompleteSlots<Props extends FormKitInputs<Pr
     help: FormKitSlotData<Props, AutocompleteSlotData>;
     messages: FormKitSlotData<Props, AutocompleteSlotData>;
     message: FormKitSlotData<Props, AutocompleteSlotData>;
+    loaderIcon: FormKitSlotData<Props, AutocompleteSlotData>;
 }
 
 declare interface FormKitColorpickerSlotData {
@@ -650,6 +651,7 @@ export declare interface FormKitDropdownSlots<Props extends FormKitInputs<Props>
         option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
         index: number;
     }>;
+    loaderIcon: FormKitSlotData<Props, DropdownSlotData>;
 }
 
 /**
@@ -942,6 +944,7 @@ export declare interface FormKitTaglistSlots<Props extends FormKitInputs<Props>>
         option: FormKitOptionsItem;
         index: number;
     }>;
+    loaderIcon: FormKitSlotData<Props, TaglistSlotData>;
 }
 
 /**
@@ -1754,9 +1757,9 @@ declare module '@formkit/inputs' {
       type: 'togglebuttons'
       onValue?: any
       offValue?: any
-      value?:
-        | (Props['onValue'] extends AllReals ? Props['onValue'] : true)
-        | (Props['offValue'] extends AllReals ? Props['offValue'] : false)
+      value?: Props['multiple'] extends Yes
+        ? OptionsProValue<Props['options']>[]
+        : OptionsProValue<Props['options']>
       options?: FormKitProOptionsProp
       label?: string
       enforced?: Bool

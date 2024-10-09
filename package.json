@@ -23,20 +23,20 @@
         "preview": "vite preview"
     },
     "devDependencies": {
-        "@formkit/addons": "^1.6.6",
-        "@formkit/core": "^1.6.6",
-        "@formkit/drag-and-drop": "^0.1.6",
-        "@formkit/icons": "^1.6.6",
-        "@formkit/inputs": "^1.6.6",
-        "@formkit/nuxt": "^1.6.6",
-        "@formkit/pro": "^0.127.2",
+        "@formkit/addons": "^1.6.7",
+        "@formkit/core": "^1.6.7",
+        "@formkit/drag-and-drop": "^0.2.0",
+        "@formkit/icons": "^1.6.7",
+        "@formkit/inputs": "^1.6.7",
+        "@formkit/nuxt": "^1.6.7",
+        "@formkit/pro": "^0.127.5",
         "@formkit/tempo": "^0.1.2",
-        "@formkit/themes": "^1.6.6",
-        "@formkit/utils": "^1.6.6",
-        "@formkit/vue": "^1.6.6",
+        "@formkit/themes": "^1.6.7",
+        "@formkit/utils": "^1.6.7",
+        "@formkit/vue": "^1.6.7",
         "@vitejs/plugin-vue": "^5.1.4",
         "prettier": "^3.3.3",
-        "vite": "^5.4.6",
-        "vue": "^3.5.6"
+        "vite": "^5.4.8",
+        "vue": "^3.5.11"
     }
 }
