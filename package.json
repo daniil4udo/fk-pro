@@ -1,7 +1,7 @@
 {
     "name": "fk-pro",
     "private": true,
-    "version": "0.127.5",
+    "version": "0.127.6",
     "type": "module",
     "main": "./lib/index.mjs",
     "exports": {
@@ -25,18 +25,18 @@
     "devDependencies": {
         "@formkit/addons": "^1.6.7",
         "@formkit/core": "^1.6.7",
-        "@formkit/drag-and-drop": "^0.2.0",
+        "@formkit/drag-and-drop": "^0.2.5",
         "@formkit/icons": "^1.6.7",
         "@formkit/inputs": "^1.6.7",
         "@formkit/nuxt": "^1.6.7",
-        "@formkit/pro": "^0.127.5",
+        "@formkit/pro": "^0.127.6",
         "@formkit/tempo": "^0.1.2",
         "@formkit/themes": "^1.6.7",
         "@formkit/utils": "^1.6.7",
         "@formkit/vue": "^1.6.7",
         "@vitejs/plugin-vue": "^5.1.4",
         "prettier": "^3.3.3",
-        "vite": "^5.4.8",
-        "vue": "^3.5.11"
+        "vite": "^5.4.10",
+        "vue": "^3.5.12"
     }
 }
