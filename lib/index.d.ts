@@ -23,7 +23,11 @@ import { FormKitTypeDefinition } from '@formkit/core';
  * @returns
  * @public
  */
-export declare function $if(condition: string, then: FormKitProExtendableSection | string, otherwise?: FormKitProExtendableSection | string): FormKitProExtendableSection;
+export declare function $if(
+    condition: string,
+    then: FormKitProExtendableSection | string,
+    otherwise?: FormKitProExtendableSection | string
+): FormKitProExtendableSection;
 
 declare type AreaUnits = 'acre' | 'hectare';
 
@@ -73,7 +77,9 @@ export declare interface AutocompleteSlotData {
         selectOption: (option: FormKitOptionsItem) => void;
         loadMoreSelected: () => void;
         toggleListbox: () => void;
-        removeSelection: (option?: FormKitOptionsItem) => (e?: MouseEvent) => void;
+        removeSelection: (
+            option?: FormKitOptionsItem
+        ) => (e?: MouseEvent) => void;
         touchmove: (e: TouchEvent) => void;
         touchend: (e: TouchEvent) => void;
         click: (e: MouseEvent) => void;
@@ -81,8 +87,12 @@ export declare interface AutocompleteSlotData {
         focus: (e: FocusEvent) => void;
         loadMore: () => void;
         selectionClick: (e: MouseEvent) => void;
-        selectionKeydown: (option: FormKitOptionsItem) => (e: KeyboardEvent) => void;
-        searchInputTagKeydown: (option: FormKitOptionsItem) => (e: KeyboardEvent) => void;
+        selectionKeydown: (
+            option: FormKitOptionsItem
+        ) => (e: KeyboardEvent) => void;
+        searchInputTagKeydown: (
+            option: FormKitOptionsItem
+        ) => (e: KeyboardEvent) => void;
     };
     fns: FormKitFrameworkContext['fns'] & {
         isSelected: (option: FormKitOptionsItem) => boolean;
@@ -141,13 +151,13 @@ export declare type CalendarMonth = Array<CalendarWeek>;
  * @public
  */
 export declare type CalendarWeek = [
-monday: Date,
-tuesday: Date,
-wednesday: Date,
-thursday: Date,
-friday: Date,
-saturday: Date,
-sunday: Date
+    monday: Date,
+    tuesday: Date,
+    wednesday: Date,
+    thursday: Date,
+    friday: Date,
+    saturday: Date,
+    sunday: Date,
 ];
 
 declare interface CharPart {
@@ -177,7 +187,10 @@ export declare function createBaseSections(createSection: SectionFactory): {
     outer: FormKitProSection<true>;
     wrapper: FormKitProSection<false>;
     inner: FormKitProSection<false>;
-    icon: (sectionKey: string, el?: string) => () => FormKitSchemaExtendableSection;
+    icon: (
+        sectionKey: string,
+        el?: string
+    ) => () => FormKitSchemaExtendableSection;
     label: FormKitProSection<false>;
     prefix: FormKitProSection<false>;
     suffix: FormKitProSection<false>;
@@ -193,7 +206,10 @@ export declare function createBaseSections(createSection: SectionFactory): {
  * @returns
  * @public
  */
-export declare function createProPlugin(apiKey: string, inputs?: Record<string, FormKitProInput>): FormKitPlugin;
+export declare function createProPlugin(
+    apiKey: string,
+    inputs?: Record<string, FormKitProInput>
+): FormKitPlugin;
 
 /**
  * Creates a new section createSection factory with the input code curried in.
@@ -287,7 +303,16 @@ export declare type DatePickerSlotData = {
     yearFormat: string;
 };
 
-declare type DistanceUnits = 'meter' | 'kilometer' | 'centimeter' | 'millimeter' | 'mile' | 'yard' | 'foot' | 'inch' | 'mile-scandinavian';
+declare type DistanceUnits =
+    | 'meter'
+    | 'kilometer'
+    | 'centimeter'
+    | 'millimeter'
+    | 'mile'
+    | 'yard'
+    | 'foot'
+    | 'inch'
+    | 'mile-scandinavian';
 
 /**
  * Input definition for a dropdown input.
@@ -330,7 +355,9 @@ export declare interface DropdownSlotData {
         tagBlur: () => void;
         blur: () => void;
         toggleListbox: () => void;
-        removeSelection: (option?: FormKitOptionsItem) => (e?: MouseEvent) => void;
+        removeSelection: (
+            option?: FormKitOptionsItem
+        ) => (e?: MouseEvent) => void;
         touchmove: (e: TouchEvent) => void;
         touchend: (e: TouchEvent) => void;
         click: (e: MouseEvent) => void;
@@ -358,11 +385,15 @@ declare interface EnumPart {
 /**
  * A schema section that is compatible with FormKitPro’s schema composition.
  */
-declare type ExtendableSchema<IsRoot> = IsRoot extends true ? FormKitExtendableSchemaRoot : FormKitSchemaExtendableSection;
+declare type ExtendableSchema<IsRoot> = IsRoot extends true
+    ? FormKitExtendableSchemaRoot
+    : FormKitSchemaExtendableSection;
 
-export { FormatStyleObj }
+export { FormatStyleObj };
 
-export declare interface FormKitAutocompleteSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitAutocompleteSlots<
+    Props extends FormKitInputs<Props>,
+> {
     outer: FormKitSlotData<Props, AutocompleteSlotData>;
     wrapper: FormKitSlotData<Props, AutocompleteSlotData>;
     label: FormKitSlotData<Props, AutocompleteSlotData>;
@@ -380,22 +411,34 @@ export declare interface FormKitAutocompleteSlots<Props extends FormKitInputs<Pr
     emptyMessageInner: FormKitSlotData<Props, AutocompleteSlotData>;
     closeIcon: FormKitSlotData<Props, AutocompleteSlotData>;
     selectIcon: FormKitSlotData<Props, AutocompleteSlotData>;
-    selectedIcon: FormKitSlotData<Props, AutocompleteSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
-    option: FormKitSlotData<Props, AutocompleteSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
-    optionLoading: FormKitSlotData<Props, AutocompleteSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
-    removeSelection: FormKitSlotData<Props, AutocompleteSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
+    selectedIcon: FormKitSlotData<
+        Props,
+        AutocompleteSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
+    option: FormKitSlotData<
+        Props,
+        AutocompleteSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
+    optionLoading: FormKitSlotData<
+        Props,
+        AutocompleteSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
+    removeSelection: FormKitSlotData<
+        Props,
+        AutocompleteSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
     suffix: FormKitSlotData<Props, AutocompleteSlotData>;
     suffixIcon: FormKitSlotData<Props, AutocompleteSlotData>;
     help: FormKitSlotData<Props, AutocompleteSlotData>;
@@ -449,8 +492,18 @@ declare interface FormKitColorpickerSlotData {
         hexKeydown: (e: KeyboardEvent) => void;
         hexFocus: () => void;
         hexBlur: (e: Event) => void;
-        rangeLimitInput: (format: string, min: number, max: number, event?: Event) => (e: Event) => void;
-        rangeLimitKeydown: (format: string, min: number, max: number, step: number) => (e: KeyboardEvent) => void;
+        rangeLimitInput: (
+            format: string,
+            min: number,
+            max: number,
+            event?: Event
+        ) => (e: Event) => void;
+        rangeLimitKeydown: (
+            format: string,
+            min: number,
+            max: number,
+            step: number
+        ) => (e: KeyboardEvent) => void;
         swatchClick: (e: Event) => void;
         swatchKeydown: (e: KeyboardEvent) => void;
     };
@@ -460,7 +513,9 @@ declare interface FormKitColorpickerSlotData {
     };
 }
 
-export declare interface FormKitColorpickerSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitColorpickerSlots<
+    Props extends FormKitInputs<Props>,
+> {
     swatchPreview: FormKitSlotData<Props, FormKitColorpickerSlotData>;
     valueString: FormKitSlotData<Props, FormKitColorpickerSlotData>;
     panel: FormKitSlotData<Props, FormKitColorpickerSlotData>;
@@ -491,10 +546,13 @@ export declare interface FormKitColorpickerSlots<Props extends FormKitInputs<Pro
     aField: FormKitSlotData<Props, FormKitColorpickerSlotData>;
     formatSwitcher: FormKitSlotData<Props, FormKitColorpickerSlotData>;
     swatches: FormKitSlotData<Props, FormKitColorpickerSlotData>;
-    swatch: FormKitSlotData<Props, FormKitColorpickerSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    swatch: FormKitSlotData<
+        Props,
+        FormKitColorpickerSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
 }
 
 /**
@@ -502,7 +560,9 @@ export declare interface FormKitColorpickerSlots<Props extends FormKitInputs<Pro
  *
  * @public
  */
-export declare interface FormKitCurrencySlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitCurrencySlots<
+    Props extends FormKitInputs<Props>,
+> {
     wrapper: FormKitSlotData<Props, CurrencySlotData<Props>>;
     input: FormKitSlotData<Props, CurrencySlotData<Props>>;
     label: FormKitSlotData<Props, CurrencySlotData<Props>>;
@@ -510,9 +570,12 @@ export declare interface FormKitCurrencySlots<Props extends FormKitInputs<Props>
     suffix: FormKitSlotData<Props, CurrencySlotData<Props>>;
     help: FormKitSlotData<Props, CurrencySlotData<Props>>;
     messages: FormKitSlotData<Props, CurrencySlotData<Props>>;
-    message: FormKitSlotData<Props, CurrencySlotData<Props> & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        CurrencySlotData<Props> & {
+            message: FormKitMessage;
+        }
+    >;
 }
 
 /**
@@ -520,29 +583,49 @@ export declare interface FormKitCurrencySlots<Props extends FormKitInputs<Props>
  *
  * @public
  */
-export declare interface FormKitDatePickerSlots<Props extends FormKitInputs<Props>> {
-    calendar: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-    }>;
-    calendarHeader: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-    }>;
-    calendarWeeks: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-    }>;
-    day: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-        week: CalendarWeek;
-        day: Date;
-    }>;
-    dayButton: FormKitSlotData<Props, DatePickerSlotData & {
-        day: Date;
-    }>;
-    dayCell: FormKitSlotData<Props, DatePickerSlotData & {
-        day: Date;
-        week: CalendarWeek;
-        month: CalendarMonth;
-    }>;
+export declare interface FormKitDatePickerSlots<
+    Props extends FormKitInputs<Props>,
+> {
+    calendar: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+        }
+    >;
+    calendarHeader: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+        }
+    >;
+    calendarWeeks: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+        }
+    >;
+    day: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+            week: CalendarWeek;
+            day: Date;
+        }
+    >;
+    dayButton: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            day: Date;
+        }
+    >;
+    dayCell: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            day: Date;
+            week: CalendarWeek;
+            month: CalendarMonth;
+        }
+    >;
     daysHeader: FormKitSlotData<Props, DatePickerSlotData>;
     help: FormKitSlotData<Props, DatePickerSlotData>;
     prefixIcon: FormKitSlotData<Props, DatePickerSlotData>;
@@ -550,14 +633,20 @@ export declare interface FormKitDatePickerSlots<Props extends FormKitInputs<Prop
     inner: FormKitSlotData<Props, DatePickerSlotData>;
     input: FormKitSlotData<Props, DatePickerSlotData>;
     label: FormKitSlotData<Props, DatePickerSlotData>;
-    message: FormKitSlotData<Props, DatePickerSlotData & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            message: FormKitMessage;
+        }
+    >;
     messages: FormKitSlotData<Props, DatePickerSlotData>;
-    month: FormKitSlotData<Props, DatePickerSlotData & {
-        month: Date;
-        months: Array<Date>;
-    }>;
+    month: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: Date;
+            months: Array<Date>;
+        }
+    >;
     monthButton: FormKitSlotData<Props, DatePickerSlotData>;
     months: FormKitSlotData<Props, DatePickerSlotData>;
     monthsHeader: FormKitSlotData<Props, DatePickerSlotData>;
@@ -575,30 +664,50 @@ export declare interface FormKitDatePickerSlots<Props extends FormKitInputs<Prop
     time: FormKitSlotData<Props, DatePickerSlotData>;
     timeHeader: FormKitSlotData<Props, DatePickerSlotData>;
     timeInput: FormKitSlotData<Props, DatePickerSlotData>;
-    week: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-    }>;
-    weekDay: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-    }>;
-    weekDays: FormKitSlotData<Props, DatePickerSlotData & {
-        month: CalendarMonth;
-    }>;
+    week: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+        }
+    >;
+    weekDay: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+        }
+    >;
+    weekDays: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            month: CalendarMonth;
+        }
+    >;
     wrapper: FormKitSlotData<Props, DatePickerSlotData>;
-    year: FormKitSlotData<Props, DatePickerSlotData & {
-        years: Array<Date>;
-    }>;
-    yearButton: FormKitSlotData<Props, DatePickerSlotData & {
-        years: Array<Date>;
-        year: Date;
-    }>;
-    years: FormKitSlotData<Props, DatePickerSlotData & {
-        years: Array<Date>;
-    }>;
+    year: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            years: Array<Date>;
+        }
+    >;
+    yearButton: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            years: Array<Date>;
+            year: Date;
+        }
+    >;
+    years: FormKitSlotData<
+        Props,
+        DatePickerSlotData & {
+            years: Array<Date>;
+        }
+    >;
     yearsHeader: FormKitSlotData<Props, DatePickerSlotData>;
 }
 
-export declare interface FormKitDropdownSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitDropdownSlots<
+    Props extends FormKitInputs<Props>,
+> {
     outer: FormKitSlotData<Props, DropdownSlotData>;
     wrapper: FormKitSlotData<Props, DropdownSlotData>;
     inner: FormKitSlotData<Props, DropdownSlotData>;
@@ -606,51 +715,75 @@ export declare interface FormKitDropdownSlots<Props extends FormKitInputs<Props>
     prefix: FormKitSlotData<Props, DropdownSlotData>;
     prefixIcon: FormKitSlotData<Props, DropdownSlotData>;
     selector: FormKitSlotData<Props, DropdownSlotData>;
-    selection: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
+    selection: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
     closeIcon: FormKitSlotData<Props, DropdownSlotData>;
     selectIcon: FormKitSlotData<Props, DropdownSlotData>;
     suffix: FormKitSlotData<Props, DropdownSlotData>;
     suffixIcon: FormKitSlotData<Props, DropdownSlotData>;
     help: FormKitSlotData<Props, DropdownSlotData>;
     messages: FormKitSlotData<Props, DropdownSlotData>;
-    message: FormKitSlotData<Props, DropdownSlotData & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            message: FormKitMessage;
+        }
+    >;
     listboxButton: FormKitSlotData<Props, DropdownSlotData>;
     dropdownWrapper: FormKitSlotData<Props, DropdownSlotData>;
     listbox: FormKitSlotData<Props, DropdownSlotData>;
     listitem: FormKitSlotData<Props, DropdownSlotData>;
     loadMore: FormKitSlotData<Props, DropdownSlotData>;
     emptyMessageInner: FormKitSlotData<Props, DropdownSlotData>;
-    selectedIcon: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
-    option: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
-    optionLoading: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
-    removeSelection: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
+    selectedIcon: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
+    option: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
+    optionLoading: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
+    removeSelection: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
     placeholder: FormKitSlotData<Props, DropdownSlotData>;
-    tag: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
+    tag: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
     tagWrapper: FormKitSlotData<Props, TaglistSlotData>;
-    tagLabel: FormKitSlotData<Props, DropdownSlotData & {
-        option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
-        index: number;
-    }>;
+    tagLabel: FormKitSlotData<
+        Props,
+        DropdownSlotData & {
+            option: FormKitOptionsItem<OptionsProValue<Props['options']>>;
+            index: number;
+        }
+    >;
     loaderIcon: FormKitSlotData<Props, DropdownSlotData>;
 }
 
@@ -660,29 +793,49 @@ export declare interface FormKitDropdownSlots<Props extends FormKitInputs<Props>
  * @public
  */
 export declare interface FormKitOptionsLoader {
-    (context: FormKitFrameworkContext<any>): Promise<FormKitOptionsProp> | FormKitOptionsProp;
+    (
+        context: FormKitFrameworkContext<any>
+    ): Promise<FormKitOptionsProp> | FormKitOptionsProp;
     (...args: any[]): Promise<FormKitOptionsProp> | FormKitOptionsProp;
 }
 
-export declare type FormKitOverlaySlots<Props extends FormKitInputs<Props>> = Props['overlay'] extends Yes ? {
-    overlay: FormKitSlotData<Props, DatePickerSlotData>;
-    overlayChar: FormKitSlotData<Props, DatePickerSlotData & {
-        part: Meta;
-    }>;
-    overlayEnum: FormKitSlotData<Props, DatePickerSlotData & {
-        part: Meta;
-    }>;
-    overlayInner: FormKitSlotData<Props, DatePickerSlotData>;
-    overlayLiteral: FormKitSlotData<Props, DatePickerSlotData & {
-        part: Meta;
-    }>;
-    overlayParts: FormKitSlotData<Props, DatePickerSlotData & {
-        part: Meta;
-    }>;
-    overlayPlaceholder: FormKitSlotData<Props, DatePickerSlotData & {
-        part: Meta;
-    }>;
-} : {};
+export declare type FormKitOverlaySlots<Props extends FormKitInputs<Props>> =
+    Props['overlay'] extends Yes
+        ? {
+              overlay: FormKitSlotData<Props, DatePickerSlotData>;
+              overlayChar: FormKitSlotData<
+                  Props,
+                  DatePickerSlotData & {
+                      part: Meta;
+                  }
+              >;
+              overlayEnum: FormKitSlotData<
+                  Props,
+                  DatePickerSlotData & {
+                      part: Meta;
+                  }
+              >;
+              overlayInner: FormKitSlotData<Props, DatePickerSlotData>;
+              overlayLiteral: FormKitSlotData<
+                  Props,
+                  DatePickerSlotData & {
+                      part: Meta;
+                  }
+              >;
+              overlayParts: FormKitSlotData<
+                  Props,
+                  DatePickerSlotData & {
+                      part: Meta;
+                  }
+              >;
+              overlayPlaceholder: FormKitSlotData<
+                  Props,
+                  DatePickerSlotData & {
+                      part: Meta;
+                  }
+              >;
+          }
+        : {};
 
 /**
  * An extendable schema section that is compatible with FormKitPro’s schema
@@ -707,7 +860,10 @@ export declare type FormKitProInput = Omit<FormKitTypeDefinition, 'schema'> & {
  *
  * @public
  */
-export declare type FormKitProOptionsProp = FormKitOptionsProp | FormKitOptionsLoader | FormKitOptionsPropWithGroups;
+export declare type FormKitProOptionsProp =
+    | FormKitOptionsProp
+    | FormKitOptionsLoader
+    | FormKitOptionsPropWithGroups;
 
 /**
  * The type definition of a FormKit pro schema.
@@ -721,23 +877,39 @@ export declare interface FormKitProSchema {
  * A schema section that is compatible with FormKitPro’s schema composition.
  */
 declare interface FormKitProSection<IsRoot extends boolean = false> {
-    (...children: Array<string | FormKitProExtendableSection>): FormKitProExtendableSection<IsRoot>;
+    (
+        ...children: Array<string | FormKitProExtendableSection>
+    ): FormKitProExtendableSection<IsRoot>;
 }
 
-export declare interface FormKitRatingSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitRatingSlots<
+    Props extends FormKitInputs<Props>,
+> {
     itemsWrapper: FormKitSlotData<Props, RatingSlotData>;
-    onItem: FormKitSlotData<Props, RatingSlotData & {
-        item: number;
-    }>;
-    offItem: FormKitSlotData<Props, RatingSlotData & {
-        item: number;
-    }>;
-    default: FormKitSlotData<Props, RatingSlotData & {
-        item: number;
-    }>;
-    ratingIcon: FormKitSlotData<Props, RatingSlotData & {
-        item: number;
-    }>;
+    onItem: FormKitSlotData<
+        Props,
+        RatingSlotData & {
+            item: number;
+        }
+    >;
+    offItem: FormKitSlotData<
+        Props,
+        RatingSlotData & {
+            item: number;
+        }
+    >;
+    default: FormKitSlotData<
+        Props,
+        RatingSlotData & {
+            item: number;
+        }
+    >;
+    ratingIcon: FormKitSlotData<
+        Props,
+        RatingSlotData & {
+            item: number;
+        }
+    >;
 }
 
 /**
@@ -745,105 +917,161 @@ export declare interface FormKitRatingSlots<Props extends FormKitInputs<Props>> 
  *
  * @public
  */
-export declare interface FormKitRepeaterSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitRepeaterSlots<
+    Props extends FormKitInputs<Props>,
+> {
     outer: FormKitSlotData<Props, RepeaterSlotData>;
     fieldset: FormKitSlotData<Props, RepeaterSlotData>;
     legend: FormKitSlotData<Props, RepeaterSlotData>;
     empty: FormKitSlotData<Props, RepeaterSlotData>;
     help: FormKitSlotData<Props, RepeaterSlotData>;
     prefix: FormKitSlotData<Props, RepeaterSlotData>;
-    default: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
+    default: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
     items: FormKitSlotData<Props, RepeaterSlotData>;
     item: FormKitSlotData<Props, RepeaterSlotData>;
-    content: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    group: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    controls: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    up: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    upControl: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    controlLabel: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    moveUpIcon: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    remove: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    removeControl: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    removeIcon: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    insert: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    insertControl: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    addIcon: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    down: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    downControl: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
-    moveDownIcon: FormKitSlotData<Props, RepeaterSlotData & {
-        item: symbol;
-        index: number;
-        value: Record<string, any>;
-    }>;
+    content: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    group: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    controls: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    up: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    upControl: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    controlLabel: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    moveUpIcon: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    remove: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    removeControl: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    removeIcon: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    insert: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    insertControl: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    addIcon: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    down: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    downControl: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
+    moveDownIcon: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            item: symbol;
+            index: number;
+            value: Record<string, any>;
+        }
+    >;
     suffix: FormKitSlotData<Props, RepeaterSlotData>;
     addButton: FormKitSlotData<Props, RepeaterSlotData>;
-    message: FormKitSlotData<Props, RepeaterSlotData & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        RepeaterSlotData & {
+            message: FormKitMessage;
+        }
+    >;
     messages: FormKitSlotData<Props, RepeaterSlotData>;
 }
 
@@ -852,7 +1080,9 @@ export declare interface FormKitRepeaterSlots<Props extends FormKitInputs<Props>
  *
  * @public
  */
-export declare interface FormKitSliderSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitSliderSlots<
+    Props extends FormKitInputs<Props>,
+> {
     outer: FormKitSlotData<Props, SliderSlotData>;
     wrapper: FormKitSlotData<Props, SliderSlotData>;
     label: FormKitSlotData<Props, SliderSlotData>;
@@ -866,13 +1096,16 @@ export declare interface FormKitSliderSlots<Props extends FormKitInputs<Props>> 
     fill: FormKitSlotData<Props, SliderSlotData>;
     marks: FormKitSlotData<Props, SliderSlotData>;
     mark: FormKitSlotData<Props, SliderSlotData>;
-    markLabel: FormKitSlotData<Props, SliderSlotData & {
-        index: number;
-        step: {
-            at: number;
-            label?: string;
-        };
-    }>;
+    markLabel: FormKitSlotData<
+        Props,
+        SliderSlotData & {
+            index: number;
+            step: {
+                at: number;
+                label?: string;
+            };
+        }
+    >;
     handles: FormKitSlotData<Props, SliderSlotData>;
     handleMin: FormKitSlotData<Props, SliderSlotData>;
     handleMax: FormKitSlotData<Props, SliderSlotData>;
@@ -885,65 +1118,94 @@ export declare interface FormKitSliderSlots<Props extends FormKitInputs<Props>> 
     minValue: FormKitSlotData<Props, SliderSlotData>;
     maxValue: FormKitSlotData<Props, SliderSlotData>;
     linkedValues: FormKitSlotData<Props, SliderSlotData>;
-    message: FormKitSlotData<Props, SliderSlotData & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        SliderSlotData & {
+            message: FormKitMessage;
+        }
+    >;
     messages: FormKitSlotData<Props, SliderSlotData>;
 }
 
-export declare interface FormKitTaglistSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitTaglistSlots<
+    Props extends FormKitInputs<Props>,
+> {
     outer: FormKitSlotData<Props, TaglistSlotData>;
     wrapper: FormKitSlotData<Props, TaglistSlotData>;
     inner: FormKitSlotData<Props, TaglistSlotData>;
     label: FormKitSlotData<Props, TaglistSlotData>;
     prefix: FormKitSlotData<Props, TaglistSlotData>;
     prefixIcon: FormKitSlotData<Props, TaglistSlotData>;
-    tag: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    tag: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
     tagWrapper: FormKitSlotData<Props, TaglistSlotData>;
-    tagLoading: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    tagLoading: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
     suffix: FormKitSlotData<Props, TaglistSlotData>;
     suffixIcon: FormKitSlotData<Props, TaglistSlotData>;
     closeIcon: FormKitSlotData<Props, DropdownSlotData>;
     selectIcon: FormKitSlotData<Props, DropdownSlotData>;
     help: FormKitSlotData<Props, TaglistSlotData>;
     messages: FormKitSlotData<Props, TaglistSlotData>;
-    message: FormKitSlotData<Props, TaglistSlotData & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            message: FormKitMessage;
+        }
+    >;
     listboxButton: FormKitSlotData<Props, TaglistSlotData>;
     dropdownWrapper: FormKitSlotData<Props, TaglistSlotData>;
     listbox: FormKitSlotData<Props, TaglistSlotData>;
     listitem: FormKitSlotData<Props, TaglistSlotData>;
     loadMore: FormKitSlotData<Props, TaglistSlotData>;
     emptyMessageInner: FormKitSlotData<Props, TaglistSlotData>;
-    selectedIcon: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
-    option: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
-    optionLoading: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
-    removeSelection: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    selectedIcon: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
+    option: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
+    optionLoading: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
+    removeSelection: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
     input: FormKitSlotData<Props, TaglistSlotData>;
     tags: FormKitSlotData<Props, TaglistSlotData>;
-    tagLabel: FormKitSlotData<Props, TaglistSlotData & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    tagLabel: FormKitSlotData<
+        Props,
+        TaglistSlotData & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
     loaderIcon: FormKitSlotData<Props, TaglistSlotData>;
 }
 
@@ -952,31 +1214,45 @@ export declare interface FormKitTaglistSlots<Props extends FormKitInputs<Props>>
  *
  * @public
  */
-export declare interface FormKitTogglebuttonsSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitTogglebuttonsSlots<
+    Props extends FormKitInputs<Props>,
+> {
     wrapper: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
     options: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
-    option: FormKitSlotData<Props, TogglebuttonsSlotData<Props> & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    option: FormKitSlotData<
+        Props,
+        TogglebuttonsSlotData<Props> & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
     singleToggle: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
-    multiToggle: FormKitSlotData<Props, TogglebuttonsSlotData<Props> & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
-    inputInner: FormKitSlotData<Props, TogglebuttonsSlotData<Props> & {
-        option: FormKitOptionsItem;
-        index: number;
-    }>;
+    multiToggle: FormKitSlotData<
+        Props,
+        TogglebuttonsSlotData<Props> & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
+    inputInner: FormKitSlotData<
+        Props,
+        TogglebuttonsSlotData<Props> & {
+            option: FormKitOptionsItem;
+            index: number;
+        }
+    >;
     on: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
     off: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
     prefix: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
     suffix: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
     help: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
     messages: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
-    message: FormKitSlotData<Props, TogglebuttonsSlotData<Props> & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        TogglebuttonsSlotData<Props> & {
+            message: FormKitMessage;
+        }
+    >;
 }
 
 /**
@@ -984,7 +1260,9 @@ export declare interface FormKitTogglebuttonsSlots<Props extends FormKitInputs<P
  *
  * @public
  */
-export declare interface FormKitToggleSlots<Props extends FormKitInputs<Props>> {
+export declare interface FormKitToggleSlots<
+    Props extends FormKitInputs<Props>,
+> {
     outer: FormKitSlotData<Props, ToggleSlotData<Props>>;
     wrapper: FormKitSlotData<Props, ToggleSlotData<Props>>;
     altLabel: FormKitSlotData<Props, ToggleSlotData<Props>>;
@@ -999,9 +1277,12 @@ export declare interface FormKitToggleSlots<Props extends FormKitInputs<Props>> 
     label: FormKitSlotData<Props, ToggleSlotData<Props>>;
     help: FormKitSlotData<Props, ToggleSlotData<Props>>;
     messages: FormKitSlotData<Props, ToggleSlotData<Props>>;
-    message: FormKitSlotData<Props, ToggleSlotData<Props> & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        ToggleSlotData<Props> & {
+            message: FormKitMessage;
+        }
+    >;
 }
 
 /**
@@ -1016,9 +1297,12 @@ export declare interface FormKitUnitSlots<Props extends FormKitInputs<Props>> {
     suffix: FormKitSlotData<Props, UnitSlotData<Props>>;
     help: FormKitSlotData<Props, UnitSlotData<Props>>;
     messages: FormKitSlotData<Props, UnitSlotData<Props>>;
-    message: FormKitSlotData<Props, UnitSlotData<Props> & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        UnitSlotData<Props> & {
+            message: FormKitMessage;
+        }
+    >;
 }
 
 /**
@@ -1051,10 +1335,10 @@ declare namespace inputs {
         colorpicker,
         togglebuttons,
         currency,
-        unit
-    }
+        unit,
+    };
 }
-export { inputs }
+export { inputs };
 
 declare interface LiteralPart<T extends string = string> {
     /**
@@ -1076,7 +1360,10 @@ export declare const mask: FormKitProInput;
 /**
  * Defines a specific part of a mask pattern.
  */
-declare type MaskPart<T extends string = string> = ((BasePart<T> & CharPart) | (BasePart<T> & EnumPart)) | LiteralPart<T> | GroupPart;
+declare type MaskPart<T extends string = string> =
+    | ((BasePart<T> & CharPart) | (BasePart<T> & EnumPart))
+    | LiteralPart<T>
+    | GroupPart;
 
 declare interface Meta {
     value: string;
@@ -1084,7 +1371,14 @@ declare interface Meta {
 }
 
 export declare interface OptionLoader {
-    (value: any, cachedItem: FormKitOptionsItem<any>): FormKitOptionsItem<any> | string | void | Promise<FormKitOptionsItem<any> | string | void>;
+    (
+        value: any,
+        cachedItem: FormKitOptionsItem<any>
+    ):
+        | FormKitOptionsItem<any>
+        | string
+        | void
+        | Promise<FormKitOptionsItem<any> | string | void>;
 }
 
 /**
@@ -1092,7 +1386,20 @@ export declare interface OptionLoader {
  *
  * @public
  */
-export declare type OptionsProValue<Options> = Options extends FormKitProOptionsProp ? Options extends (...args: any[]) => any ? ReturnType<Options> extends FormKitOptionsProp ? FormKitOptionsValue<ReturnType<Options>> : ReturnType<Options> extends Promise<infer T> ? T extends FormKitOptionsProp ? FormKitOptionsValue<T> : unknown : unknown : Options extends FormKitOptionsProp ? FormKitOptionsValue<Options> : unknown : unknown;
+export declare type OptionsProValue<Options> =
+    Options extends FormKitProOptionsProp
+        ? Options extends (...args: any[]) => any
+            ? ReturnType<Options> extends FormKitOptionsProp
+                ? FormKitOptionsValue<ReturnType<Options>>
+                : ReturnType<Options> extends Promise<infer T>
+                  ? T extends FormKitOptionsProp
+                      ? FormKitOptionsValue<T>
+                      : unknown
+                  : unknown
+            : Options extends FormKitOptionsProp
+              ? FormKitOptionsValue<Options>
+              : unknown
+        : unknown;
 
 /**
  * The available popover panels for the datepicker.
@@ -1164,7 +1471,11 @@ declare interface RepeaterSlotData {
  * A factory that creates createSection functions that are curried with the
  * input code.
  */
-declare type SectionFactory = <IsRoot extends boolean = false>(sectionName: string, schema: string | (() => FormKitSchemaNode), root?: IsRoot) => FormKitProSection<IsRoot>;
+declare type SectionFactory = <IsRoot extends boolean = false>(
+    sectionName: string,
+    schema: string | (() => FormKitSchemaNode),
+    root?: IsRoot
+) => FormKitProSection<IsRoot>;
 
 /**
  * Input definition for a slider input.
@@ -1203,10 +1514,12 @@ export declare interface SliderSlotData {
         at: number;
     }>;
     inputAttrs?: Record<string, any>;
-    marks?: Bool | Array<{
-        at?: number;
-        label?: string;
-    }>;
+    marks?:
+        | Bool
+        | Array<{
+              at?: number;
+              label?: string;
+          }>;
     markLabel?: Bool;
     max: number | string;
     maxInputAttrs?: Record<string, any>;
@@ -1267,7 +1580,9 @@ export declare interface TaglistSlotData {
         tagBlur: () => void;
         blur: () => void;
         toggleListbox: () => void;
-        removeSelection: (option: FormKitOptionsItem) => (e?: MouseEvent) => void;
+        removeSelection: (
+            option: FormKitOptionsItem
+        ) => (e?: MouseEvent) => void;
         touchmove: (e: TouchEvent) => void;
         touchend: (e: TouchEvent) => void;
         click: (e: MouseEvent) => void;
@@ -1283,7 +1598,17 @@ export declare interface TaglistSlotData {
 
 declare type TemperatureUnits = 'celsius' | 'fahrenheit';
 
-declare type TimeUnits = 'day' | 'hour' | 'microsecond' | 'millisecond' | 'minute' | 'month' | 'nanosecond' | 'second' | 'week' | 'year';
+declare type TimeUnits =
+    | 'day'
+    | 'hour'
+    | 'microsecond'
+    | 'millisecond'
+    | 'minute'
+    | 'month'
+    | 'nanosecond'
+    | 'second'
+    | 'week'
+    | 'year';
 
 /**
  * Input definition for a toggle input.
@@ -1300,7 +1625,9 @@ export declare const togglebuttons: FormKitProInput;
 /**
  * Slot data for togglebuttons
  */
-export declare interface TogglebuttonsSlotData<Props extends FormKitInputs<Props>> {
+export declare interface TogglebuttonsSlotData<
+    Props extends FormKitInputs<Props>,
+> {
     onValue?: any;
     offValue?: any;
     offLabel?: string;
@@ -1423,9 +1750,12 @@ export declare interface TransferlistSlots<Props extends FormKitInputs<Props>> {
     emptyMessageInner: FormKitSlotData<Props, TransferlistSlotData>;
     sourceListItem: FormKitSlotData<Props, TransferlistSlotData>;
     selectedIcon: FormKitSlotData<Props, TransferlistSlotData>;
-    sourceOption: FormKitSlotData<Props, TransferlistSlotData & {
-        option: FormKitOptionsItem;
-    }>;
+    sourceOption: FormKitSlotData<
+        Props,
+        TransferlistSlotData & {
+            option: FormKitOptionsItem;
+        }
+    >;
     sourceLoadMore: FormKitSlotData<Props, TransferlistSlotData>;
     loadMoreInner: FormKitSlotData<Props, TransferlistSlotData>;
     loaderIcon: FormKitSlotData<Props, TransferlistSlotData>;
@@ -1446,14 +1776,20 @@ export declare interface TransferlistSlots<Props extends FormKitInputs<Props>> {
     targetListItems: FormKitSlotData<Props, TransferlistSlotData>;
     targetEmptyMessage: FormKitSlotData<Props, TransferlistSlotData>;
     targetListItem: FormKitSlotData<Props, TransferlistSlotData>;
-    targetOption: FormKitSlotData<Props, TransferlistSlotData & {
-        option: FormKitOptionsItem;
-    }>;
+    targetOption: FormKitSlotData<
+        Props,
+        TransferlistSlotData & {
+            option: FormKitOptionsItem;
+        }
+    >;
     targetLoadMore: FormKitSlotData<Props, TransferlistSlotData>;
     messages: FormKitSlotData<Props, ToggleSlotData<Props>>;
-    message: FormKitSlotData<Props, ToggleSlotData<Props> & {
-        message: FormKitMessage;
-    }>;
+    message: FormKitSlotData<
+        Props,
+        ToggleSlotData<Props> & {
+            message: FormKitMessage;
+        }
+    >;
 }
 
 /**
@@ -1462,7 +1798,13 @@ export declare interface TransferlistSlots<Props extends FormKitInputs<Props>> {
  */
 export declare const unit: FormKitProInput;
 
-export declare type Units = DistanceUnits | TemperatureUnits | AreaUnits | WeightUnits | VolumenUnits | TimeUnits;
+export declare type Units =
+    | DistanceUnits
+    | TemperatureUnits
+    | AreaUnits
+    | WeightUnits
+    | VolumenUnits
+    | TimeUnits;
 
 /**
  * Slot data for unit
@@ -1499,316 +1841,327 @@ declare type Yes = 'true' | true | '';
 
 /* <declare> */
 declare module '@formkit/core' {
-  export interface FormKitFrameworkContext {
-    hasNextPage: (dataForNextPage?: unknown) => void
-    page: number
-    search: string
-  }
+    export interface FormKitFrameworkContext {
+        hasNextPage: (dataForNextPage?: unknown) => void;
+        page: number;
+        search: string;
+    }
 }
 /* </declare> */
 /* <declare> */
-import type { FormKitBaseSlots } from '@formkit/inputs'
+import type { FormKitBaseSlots } from '@formkit/inputs';
 export interface OptionLoader {
-  (value: any, cachedItem: FormKitOptionsItem<any>):
-    | FormKitOptionsItem<any>
-    | string
-    | void
-    | Promise<FormKitOptionsItem<any> | string | void>
+    (
+        value: any,
+        cachedItem: FormKitOptionsItem<any>
+    ):
+        | FormKitOptionsItem<any>
+        | string
+        | void
+        | Promise<FormKitOptionsItem<any> | string | void>;
 }
 
 declare module '@formkit/inputs' {
-  interface FormKitConditionalProps {
-    overlay?: undefined
-    chart?: undefined
-  }
-
-  interface FormKitInputProps<Props extends FormKitInputs<Props>> {
-    autocomplete: {
-      type: 'autocomplete'
-      value?: Props['multiple'] extends Yes
-        ? OptionsProValue<Props['options']>[]
-        : OptionsProValue<Props['options']>
-      debounce?: number | string
-      multiple?: Bool
-      popover?: Bool
-      options: FormKitProOptionsProp
-      selectionAppearance?: 'option' | 'text-input'
-      filter?: (option: FormKitOptionsItem, search: string) => boolean
-      optionLoader?: OptionLoader
-      // Behavioral props
-      max?: Props['multiple'] extends Yes ? number | string : undefined
-      openOnClick?: Bool
-      openOnFocus?: Bool
-      closeOnSelect?: Bool
-      openOnRemove?: Bool
-      alwaysLoadOnOpen?: Bool
-      selectionRemovable?: Props['multiple'] extends Yes ? undefined : Bool
-      loadOnCreated?: Bool
-      clearSearchOnOpen?: Bool
-      emptyMessage?: string
-      // TODO: audit these props.
+    interface FormKitConditionalProps {
+        overlay?: undefined;
+        chart?: undefined;
     }
 
-    colorpicker: {
-      type: 'colorpicker'
-      value?: string
-      options?: FormKitOptionsPropWithGroups
-      inline?: Bool
-      format?: 'hex' | 'rgba' | 'hsla'
-      popover?: Bool
-      valueFormat?: 'hex' | 'rgba' | 'hsla'
-      panelControls?: Bool
-      panelFormat?: Bool
-      eyeDropper?: Bool
-      showValue?: Bool
-      closeOnSelect?: Bool
-      allowPaste?: Bool
+    interface FormKitInputProps<Props extends FormKitInputs<Props>> {
+        autocomplete: {
+            type: 'autocomplete';
+            value?: Props['multiple'] extends Yes
+                ? OptionsProValue<Props['options']>[]
+                : OptionsProValue<Props['options']>;
+            debounce?: number | string;
+            multiple?: Bool;
+            popover?: Bool;
+            options: FormKitProOptionsProp;
+            selectionAppearance?: 'option' | 'text-input';
+            filter?: (option: FormKitOptionsItem, search: string) => boolean;
+            optionLoader?: OptionLoader;
+            // Behavioral props
+            max?: Props['multiple'] extends Yes ? number | string : undefined;
+            openOnClick?: Bool;
+            openOnFocus?: Bool;
+            closeOnSelect?: Bool;
+            openOnRemove?: Bool;
+            alwaysLoadOnOpen?: Bool;
+            selectionRemovable?: Props['multiple'] extends Yes
+                ? undefined
+                : Bool;
+            loadOnCreated?: Bool;
+            clearSearchOnOpen?: Bool;
+            emptyMessage?: string;
+            // TODO: audit these props.
+        };
+
+        colorpicker: {
+            type: 'colorpicker';
+            value?: string;
+            options?: FormKitOptionsPropWithGroups;
+            inline?: Bool;
+            format?: 'hex' | 'rgba' | 'hsla';
+            popover?: Bool;
+            valueFormat?: 'hex' | 'rgba' | 'hsla';
+            panelControls?: Bool;
+            panelFormat?: Bool;
+            eyeDropper?: Bool;
+            showValue?: Bool;
+            closeOnSelect?: Bool;
+            allowPaste?: Bool;
+        };
+
+        currency: {
+            type: 'currency';
+            value?: string | number;
+            label?: string;
+            disabled?: Bool;
+            currency?: string;
+            displayLocale?: string;
+            decimals?: Bool | number | string;
+            minDecimals?: number | string;
+            min?: number | string;
+            max?: number | string;
+            step?: number;
+            // valueLocale?: string
+            // valueFormat?: string
+        };
+
+        unit: {
+            type: 'unit';
+            value?: string | number;
+            label?: string;
+            disabled?: Bool;
+            unit?: Units;
+            displayLocale?: string;
+            decimals?: Bool | number | string;
+            minDecimals?: number | string;
+            min?: number | string;
+            max?: number | string;
+            step?: number;
+            valueUnit?: Units;
+            valueUnitDecimals?: number;
+            unitDisplay?: 'long' | 'short' | 'narrow';
+        };
+
+        datepicker: {
+            type: 'datepicker';
+            value?: string | Date;
+            dateFormat?: string;
+            disabledDays?: (node: FormKitNode, date: Date) => boolean;
+            format?: string | FormatStyleObj;
+            maxDate?: Date | string;
+            popover?: Bool;
+            maxScan?: number;
+            minDate?: Date | string;
+            monthButtonFormat?: 'M' | 'MM' | 'MMM' | 'MMMM';
+            monthFormat?: 'M' | 'MM' | 'MMM' | 'MMMM';
+            overlay?: Bool;
+            pickerOnly?: Bool;
+            showMonths?: number;
+            sequence?: Array<Panels>;
+            valueFormat?: string;
+            valueLocale?: string;
+            weekStart?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+            weekDayFormat?: 'dddd' | 'ddd' | 'dd';
+            yearFormat?: 'YY' | 'YYYY';
+            prefixIcon?: string;
+            suffixIcon?: string;
+        };
+
+        dropdown: {
+            type: 'dropdown';
+            value?: Props['multiple'] extends Yes
+                ? OptionsProValue<Props['options']>[]
+                : OptionsProValue<Props['options']>;
+            multiple?: Bool;
+            popover?: Bool;
+            options?: FormKitProOptionsProp;
+            selectionAppearance?: 'truncate' | 'tags';
+            filter?: (option: FormKitOptionsItem, search: string) => boolean;
+            optionLoader?: OptionLoader;
+            emptyMessage?: string;
+            max?: Props['multiple'] extends Yes ? number | string : undefined;
+            openOnFocus?: Bool;
+            openOnRemove?: Bool;
+            closeOnSelect?: Bool;
+            clearSearchOnOpen?: Bool;
+            selectionRemovable?: Props['multiple'] extends Yes
+                ? undefined
+                : Bool;
+            loadOnCreated?: Bool;
+            alwaysLoadOnOpen?: Bool;
+            clearOnSelect?: Bool;
+        };
+
+        rating: {
+            value?: number | string;
+            type: 'rating';
+            min?: string | number;
+            max?: string | number;
+            step?: string | number;
+            hoverHighlight?: Bool;
+            offColor?: string;
+            onColor?: string;
+        };
+
+        repeater: {
+            type: 'repeater';
+            value?: Array<Record<string, any>>;
+            addLabel?: string;
+            addAttrs?: Record<string, any>;
+            addButton?: Bool;
+            upControl?: Bool;
+            downControl?: Bool;
+            insertControl?: Bool;
+            removeControl?: Bool;
+            min?: number | string;
+            max?: number | string | null;
+        };
+
+        mask: {
+            type: 'mask';
+            mask: string;
+            value?: string;
+            allowIncomplete?: Bool;
+            mode?: 'shift' | 'replace' | 'select';
+            overlay?: Bool;
+            prefix?: string;
+            showMask?: Bool;
+            suffix?: string;
+            tokens?: PartMap;
+            unmaskValue?: Bool;
+        };
+
+        slider: {
+            type: 'slider';
+            value?: string | string[] | number | number[];
+            chart?: Array<{ value: number; at: number }>;
+            inputAttrs?: Record<string, any>;
+            marks?:
+                | Bool
+                | Array<{
+                      at?: number;
+                      label?: string;
+                      class?: string;
+                      labelClass?: string;
+                  }>;
+            markLabel?: Bool;
+            max?: number | string;
+            maxInputAttrs?: Record<string, any>;
+            min?: string | number;
+            minInputAttrs?: Record<string, any>;
+            prefix?: string;
+            showInput?: Bool;
+            snapToMarks?: Bool;
+            step?: number | string;
+            suffix?: string;
+            tooltip?: Bool;
+            tooltipFormat?: (
+                value: number,
+                handle: string
+            ) => string | undefined;
+            scalingFunction?: 'linear' | 'log' | SliderScalingFunction;
+            intervals?: SliderIntervals;
+        };
+
+        taglist: {
+            type: 'taglist';
+            value?: any[];
+            debounce?: number | string;
+            options?: FormKitProOptionsProp;
+            selectionAppearance?: 'truncate' | 'tags';
+            popover?: Bool;
+            openOnClick?: Bool;
+            filter?: (option: FormKitOptionsItem, search: string) => boolean;
+            optionLoader?: OptionLoader;
+            emptyMessage?: string;
+            max?: number | string;
+            closeOnSelect?: Bool;
+            alwaysLoadOnOpen?: Bool;
+            loadOnCreated?: Bool;
+            clearSearchOnOpen?: Bool;
+        };
+
+        toggle: {
+            type: 'toggle';
+            onValue?: any;
+            offValue?: any;
+            value?:
+                | (Props['onValue'] extends AllReals ? Props['onValue'] : true)
+                | (Props['offValue'] extends AllReals
+                      ? Props['offValue']
+                      : false);
+            altLabelPosition?: Bool;
+            offValueLabel?: string;
+            onValueLabel?: string;
+            valueLabelDisplay?: 'on' | 'off' | 'inner' | 'hidden';
+            valueLabelColorOff?: string;
+            valueLabelColorOn?: string;
+            thumbIcon?: string;
+            thumbColorOn?: string;
+            iconColorOff?: string;
+            iconColorOn?: string;
+            trackColorOff?: string;
+            trackColorOn?: string;
+        };
+
+        togglebuttons: {
+            type: 'togglebuttons';
+            onValue?: any;
+            offValue?: any;
+            value?: Props['multiple'] extends Yes
+                ? OptionsProValue<Props['options']>[]
+                : OptionsProValue<Props['options']>;
+            options?: FormKitProOptionsProp;
+            label?: string;
+            enforced?: Bool;
+            multiple?: Bool;
+            vertical?: Bool;
+            disabled?: Bool;
+            prefixIcon?: string;
+            suffixIcon?: string;
+        };
+
+        transferlist: {
+            type: 'transferlist';
+            value?: OptionsProValue<Props['options']>[];
+            options: FormKitProOptionsProp;
+            debounce?: number | string;
+            filter?: (option: FormKitOptionsItem, search: string) => boolean;
+            optionLoader?: OptionLoader;
+            sourceEmptyMessage?: string;
+            targetEmptyMessage?: string;
+            max?: string | number;
+            clearOnSelect?: Bool;
+            searchable?: Bool;
+            sourceLabel?: string;
+            targetLabel?: string;
+            transferOnSelect?: Bool;
+        };
     }
 
-    currency: {
-      type: 'currency'
-      value?: string | number
-      label?: string
-      disabled?: Bool
-      currency?: string
-      displayLocale?: string
-      decimals?: Bool | number | string
-      minDecimals?: number | string
-      min?: number | string
-      max?: number | string
-      step?: number
-      // valueLocale?: string
-      // valueFormat?: string
+    interface FormKitInputSlots<Props extends FormKitInputs<Props>> {
+        autocomplete: FormKitAutocompleteSlots<Props>;
+        colorpicker: FormKitColorpickerSlots<Props>;
+        currency: FormKitCurrencySlots<Props>;
+        datepicker: FormKitDatePickerSlots<Props> & FormKitOverlaySlots<Props>;
+        dropdown: FormKitDropdownSlots<Props>;
+        mask: FormKitBaseSlots<Props> & FormKitOverlaySlots<Props>;
+        rating: FormKitBaseSlots<Props> & FormKitRatingSlots<Props>;
+        repeater: FormKitRepeaterSlots<Props>;
+        slider: FormKitSliderSlots<Props> &
+            (Props['chart'] extends Array<{ at: number; value: number }>
+                ? SliderChartSlots<Props>
+                : {});
+        taglist: FormKitTaglistSlots<Props>;
+        toggle: FormKitToggleSlots<Props>;
+        togglebuttons: FormKitTogglebuttonsSlots<Props>;
+        transferlist: TransferlistSlots<Props>;
+        unit: FormKitUnitSlots<Props>;
     }
-
-    unit: {
-      type: 'unit'
-      value?: string | number
-      label?: string
-      disabled?: Bool
-      unit?: Units
-      displayLocale?: string
-      decimals?: Bool | number | string
-      minDecimals?: number | string
-      min?: number | string
-      max?: number | string
-      step?: number
-      valueUnit?: Units
-      valueUnitDecimals?: number
-      unitDisplay?: 'long' | 'short' | 'narrow'
-    }
-
-    datepicker: {
-      type: 'datepicker'
-      value?: string | Date
-      dateFormat?: string
-      disabledDays?: (node: FormKitNode, date: Date) => boolean
-      format?: string | FormatStyleObj
-      maxDate?: Date | string
-      popover?: Bool
-      maxScan?: number
-      minDate?: Date | string
-      monthButtonFormat?: 'M' | 'MM' | 'MMM' | 'MMMM'
-      monthFormat?: 'M' | 'MM' | 'MMM' | 'MMMM'
-      overlay?: Bool
-      pickerOnly?: Bool
-      showMonths?: number
-      sequence?: Array<Panels>
-      valueFormat?: string
-      valueLocale?: string
-      weekStart?: 0 | 1 | 2 | 3 | 4 | 5 | 6
-      weekDayFormat?: 'dddd' | 'ddd' | 'dd'
-      yearFormat?: 'YY' | 'YYYY'
-      prefixIcon?: string
-      suffixIcon?: string
-    }
-
-    dropdown: {
-      type: 'dropdown'
-      value?: Props['multiple'] extends Yes
-        ? OptionsProValue<Props['options']>[]
-        : OptionsProValue<Props['options']>
-      multiple?: Bool
-      popover?: Bool
-      options?: FormKitProOptionsProp
-      selectionAppearance?: 'truncate' | 'tags'
-      filter?: (option: FormKitOptionsItem, search: string) => boolean
-      optionLoader?: OptionLoader
-      emptyMessage?: string
-      max?: Props['multiple'] extends Yes ? number | string : undefined
-      openOnFocus?: Bool
-      openOnRemove?: Bool
-      closeOnSelect?: Bool
-      clearSearchOnOpen?: Bool
-      selectionRemovable?: Props['multiple'] extends Yes ? undefined : Bool
-      loadOnCreated?: Bool
-      alwaysLoadOnOpen?: Bool
-      clearOnSelect?: Bool
-    }
-
-    rating: {
-      value?: number | string
-      type: 'rating'
-      min?: string | number
-      max?: string | number
-      step?: string | number
-      hoverHighlight?: Bool
-      offColor?: string
-      onColor?: string
-    }
-
-    repeater: {
-      type: 'repeater'
-      value?: Array<Record<string, any>>
-      addLabel?: string
-      addAttrs?: Record<string, any>
-      addButton?: Bool
-      upControl?: Bool
-      downControl?: Bool
-      insertControl?: Bool
-      removeControl?: Bool
-      min?: number | string
-      max?: number | string | null
-    }
-
-    mask: {
-      type: 'mask'
-      mask: string
-      value?: string
-      allowIncomplete?: Bool
-      mode?: 'shift' | 'replace' | 'select'
-      overlay?: Bool
-      prefix?: string
-      showMask?: Bool
-      suffix?: string
-      tokens?: PartMap
-      unmaskValue?: Bool
-    }
-
-    slider: {
-      type: 'slider'
-      value?: string | string[] | number | number[]
-      chart?: Array<{ value: number; at: number }>
-      inputAttrs?: Record<string, any>
-      marks?:
-        | Bool
-        | Array<{
-            at?: number
-            label?: string
-            class?: string
-            labelClass?: string
-          }>
-      markLabel?: Bool
-      max?: number | string
-      maxInputAttrs?: Record<string, any>
-      min?: string | number
-      minInputAttrs?: Record<string, any>
-      prefix?: string
-      showInput?: Bool
-      snapToMarks?: Bool
-      step?: number | string
-      suffix?: string
-      tooltip?: Bool
-      tooltipFormat?: (value: number, handle: string) => string | undefined
-      scalingFunction?: 'linear' | 'log' | SliderScalingFunction
-      intervals?: SliderIntervals
-    }
-
-    taglist: {
-      type: 'taglist'
-      value?: any[]
-      debounce?: number | string
-      options?: FormKitProOptionsProp
-      selectionAppearance?: 'truncate' | 'tags'
-      popover?: Bool
-      openOnClick?: Bool
-      filter?: (option: FormKitOptionsItem, search: string) => boolean
-      optionLoader?: OptionLoader
-      emptyMessage?: string
-      max?: number | string
-      closeOnSelect?: Bool
-      alwaysLoadOnOpen?: Bool
-      loadOnCreated?: Bool
-      clearSearchOnOpen?: Bool
-    }
-
-    toggle: {
-      type: 'toggle'
-      onValue?: any
-      offValue?: any
-      value?:
-        | (Props['onValue'] extends AllReals ? Props['onValue'] : true)
-        | (Props['offValue'] extends AllReals ? Props['offValue'] : false)
-      altLabelPosition?: Bool
-      offValueLabel?: string
-      onValueLabel?: string
-      valueLabelDisplay?: 'on' | 'off' | 'inner' | 'hidden'
-      valueLabelColorOff?: string
-      valueLabelColorOn?: string
-      thumbIcon?: string
-      thumbColorOn?: string
-      iconColorOff?: string
-      iconColorOn?: string
-      trackColorOff?: string
-      trackColorOn?: string
-    }
-
-    togglebuttons: {
-      type: 'togglebuttons'
-      onValue?: any
-      offValue?: any
-      value?: Props['multiple'] extends Yes
-        ? OptionsProValue<Props['options']>[]
-        : OptionsProValue<Props['options']>
-      options?: FormKitProOptionsProp
-      label?: string
-      enforced?: Bool
-      multiple?: Bool
-      vertical?: Bool
-      disabled?: Bool
-      prefixIcon?: string
-      suffixIcon?: string
-    }
-
-    transferlist: {
-      type: 'transferlist'
-      value?: OptionsProValue<Props['options']>[]
-      options: FormKitProOptionsProp
-      debounce?: number | string
-      filter?: (option: FormKitOptionsItem, search: string) => boolean
-      optionLoader?: OptionLoader
-      sourceEmptyMessage?: string
-      targetEmptyMessage?: string
-      max?: string | number
-      clearOnSelect?: Bool
-      searchable?: Bool
-      sourceLabel?: string
-      targetLabel?: string
-      transferOnSelect?: Bool
-    }
-  }
-
-  interface FormKitInputSlots<Props extends FormKitInputs<Props>> {
-    autocomplete: FormKitAutocompleteSlots<Props>
-    colorpicker: FormKitColorpickerSlots<Props>
-    currency: FormKitCurrencySlots<Props>
-    datepicker: FormKitDatePickerSlots<Props> & FormKitOverlaySlots<Props>
-    dropdown: FormKitDropdownSlots<Props>
-    mask: FormKitBaseSlots<Props> & FormKitOverlaySlots<Props>
-    rating: FormKitBaseSlots<Props> & FormKitRatingSlots<Props>
-    repeater: FormKitRepeaterSlots<Props>
-    slider: FormKitSliderSlots<Props> &
-      (Props['chart'] extends Array<{ at: number; value: number }>
-        ? SliderChartSlots<Props>
-        : {})
-    taglist: FormKitTaglistSlots<Props>
-    toggle: FormKitToggleSlots<Props>
-    togglebuttons: FormKitTogglebuttonsSlots<Props>
-    transferlist: TransferlistSlots<Props>
-    unit: FormKitUnitSlots<Props>
-  }
 }
 /* </declare> */
 
-export { }
-
+export {};
