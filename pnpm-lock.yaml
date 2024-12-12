@@ -25,10 +25,10 @@ importers:
         version: 1.6.9
       '@formkit/nuxt':
         specifier: ^1.6.9
-        version: 1.6.9(rollup@4.28.0)(vite@6.0.2(jiti@2.4.1))(vue@3.5.13)
+        version: 1.6.9(rollup@4.28.0)(vite@6.0.3(jiti@2.4.1))(vue@3.5.13)
       '@formkit/pro':
-        specifier: ^0.127.9
-        version: 0.127.9(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)
+        specifier: ^0.127.10
+        version: 0.127.10(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)
       '@formkit/tempo':
         specifier: ^0.1.2
         version: 0.1.2
@@ -43,13 +43,13 @@ importers:
         version: 1.6.9(vue@3.5.13)
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
-        version: 5.2.1(vite@6.0.2(jiti@2.4.1))(vue@3.5.13)
+        version: 5.2.1(vite@6.0.3(jiti@2.4.1))(vue@3.5.13)
       prettier:
-        specifier: ^3.4.1
-        version: 3.4.1
+        specifier: ^3.4.2
+        version: 3.4.2
       vite:
-        specifier: ^6.0.2
-        version: 6.0.2(jiti@2.4.1)
+        specifier: ^6.0.3
+        version: 6.0.3(jiti@2.4.1)
       vue:
         specifier: ^3.5.13
         version: 3.5.13
@@ -304,8 +304,8 @@ packages:
   '@formkit/observer@1.6.9':
     resolution: {integrity: sha512-p3MCmzp6jwzXIuV3gI9uTJTJl+sN5689C7qf7gdrS8jb1fbX1snKiTyWA8FXOrBXu+ne5z/sA/yBWqYFTSLy8A==}
 
-  '@formkit/pro@0.127.9':
-    resolution: {integrity: sha512-qfhwTEpHrPCGIlF5L2ma1tcPAnvjzSE8GhpevCG+lcvGKUmxkDuvpnI3j0ZEMOFDWtNa8ebJQ4ls7JAk4UEsxQ==}
+  '@formkit/pro@0.127.10':
+    resolution: {integrity: sha512-P47BNABBncV2CCbk18RbdAQfXBOLKiws0UZF+5E9/SPaukc9V7UCk0EzFCxyCoWNI9qY2jUPD8JZnXB0uSEZwg==}
     peerDependencies:
       '@formkit/core': ^1.6.5
       '@formkit/inputs': ^1.6.5
@@ -878,8 +878,8 @@ packages:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier@3.4.1:
-    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1010,8 +1010,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  vite@6.0.2:
-    resolution: {integrity: sha512-XdQ+VsY2tJpBsKGs0wf3U/+azx8BBpYRHFAyKm5VeEZNOJZRB63q7Sc8Iup3k0TrN3KO6QgyzFf+opSbfY1y0g==}
+  vite@6.0.3:
+    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -1288,7 +1288,7 @@ snapshots:
       '@formkit/core': 1.6.9
       '@formkit/utils': 1.6.9
 
-  '@formkit/nuxt@1.6.9(rollup@4.28.0)(vite@6.0.2(jiti@2.4.1))(vue@3.5.13)':
+  '@formkit/nuxt@1.6.9(rollup@4.28.0)(vite@6.0.3(jiti@2.4.1))(vue@3.5.13)':
     dependencies:
       '@formkit/core': 1.6.9
       '@formkit/i18n': 1.6.9
@@ -1297,7 +1297,7 @@ snapshots:
       chokidar: 3.6.0
       pathe: 1.1.2
       unplugin: 1.16.0
-      unplugin-formkit: 0.2.13(rollup@4.28.0)(vite@6.0.2(jiti@2.4.1))
+      unplugin-formkit: 0.2.13(rollup@4.28.0)(vite@6.0.3(jiti@2.4.1))
     transitivePeerDependencies:
       - esbuild
       - magicast
@@ -1315,7 +1315,7 @@ snapshots:
       '@formkit/core': 1.6.9
       '@formkit/utils': 1.6.9
 
-  '@formkit/pro@0.127.9(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)':
+  '@formkit/pro@0.127.10(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)':
     dependencies:
       '@formkit/core': 1.6.9
       '@formkit/drag-and-drop': 0.0.38
@@ -1502,9 +1502,9 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
-  '@vitejs/plugin-vue@5.2.1(vite@6.0.2(jiti@2.4.1))(vue@3.5.13)':
+  '@vitejs/plugin-vue@5.2.1(vite@6.0.3(jiti@2.4.1))(vue@3.5.13)':
     dependencies:
-      vite: 6.0.2(jiti@2.4.1)
+      vite: 6.0.3(jiti@2.4.1)
       vue: 3.5.13
 
   '@vue/compiler-core@3.5.13':
@@ -1899,7 +1899,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier@3.4.1: {}
+  prettier@3.4.2: {}
 
   queue-microtask@1.2.3: {}
 
@@ -2020,13 +2020,13 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  unplugin-formkit@0.2.13(rollup@4.28.0)(vite@6.0.2(jiti@2.4.1)):
+  unplugin-formkit@0.2.13(rollup@4.28.0)(vite@6.0.3(jiti@2.4.1)):
     dependencies:
       pathe: 1.1.2
       unplugin: 1.16.0
     optionalDependencies:
       rollup: 4.28.0
-      vite: 6.0.2(jiti@2.4.1)
+      vite: 6.0.3(jiti@2.4.1)
 
   unplugin@1.16.0:
     dependencies:
@@ -2051,7 +2051,7 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vite@6.0.2(jiti@2.4.1):
+  vite@6.0.3(jiti@2.4.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
