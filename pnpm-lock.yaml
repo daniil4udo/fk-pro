@@ -27,8 +27,8 @@ importers:
         specifier: ^1.6.9
         version: 1.6.9(rollup@4.28.1)(vite@6.0.3(jiti@2.4.1))(vue@3.5.13)
       '@formkit/pro':
-        specifier: ^0.127.13
-        version: 0.127.13(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)
+        specifier: ^0.127.14
+        version: 0.127.14(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)
       '@formkit/tempo':
         specifier: ^0.1.2
         version: 0.1.2
@@ -304,8 +304,8 @@ packages:
   '@formkit/observer@1.6.9':
     resolution: {integrity: sha512-p3MCmzp6jwzXIuV3gI9uTJTJl+sN5689C7qf7gdrS8jb1fbX1snKiTyWA8FXOrBXu+ne5z/sA/yBWqYFTSLy8A==}
 
-  '@formkit/pro@0.127.13':
-    resolution: {integrity: sha512-AJx5U4EtcMMBxLIXoCNNFsw9kdUKwsh0z/+oGzA9K42i8gp220ozFw0m+SbwQunA0WBYXrXPikku/nCvGWbUUA==}
+  '@formkit/pro@0.127.14':
+    resolution: {integrity: sha512-fDGUxvcb/G71jRMMDA7pG8eY0PDI6W8bHbK4geDd0E89S1I3/SDMUWC35i2GeCvWfkd870MoQPj/IM9sxIlSBw==}
     peerDependencies:
       '@formkit/core': ^1.6.5
       '@formkit/inputs': ^1.6.5
@@ -380,8 +380,8 @@ packages:
     resolution: {integrity: sha512-A1d/08ueX8stTXNkvGqnr1eEXZgvKn+vj6s7jXhZNWApUSqMgItU4VK28vrrdpKbjIPwq2SwhnGOHUYvN9HwCQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  '@rollup/pluginutils@5.1.3':
-    resolution: {integrity: sha512-Pnsb6f32CD2W3uCaLZIzDmeFyQ2b8UWMFI7xtwUezpcGBDVDW6y9XgAWIlARiGAo6eNF5FK5aQTr0LFyNyqq5A==}
+  '@rollup/pluginutils@5.1.4':
+    resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -557,8 +557,8 @@ packages:
       magicast:
         optional: true
 
-  caniuse-lite@1.0.30001688:
-    resolution: {integrity: sha512-Nmqpru91cuABu/DTCXbM2NSRHzM2uVHfPnhJ/1zEAJx/ILBRVmz3pzH4N7DZqbdG0gWClsCC05Oj0mJ/1AWMbA==}
+  caniuse-lite@1.0.30001689:
+    resolution: {integrity: sha512-CmeR2VBycfa+5/jOfnp/NpWPGd06nf1XYiefUvhXFfZE4GkRc9jv+eGPS4nT558WS/8lYCzV8SlANCIPvbWP1g==}
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -763,8 +763,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  magic-string@0.30.15:
-    resolution: {integrity: sha512-zXeaYRgZ6ldS1RJJUrMrYgNJ4fdwnyI6tVqoiIhyCyv5IVTK9BU8Ic2l253GGETQHxI4HNUwhJ3fjDhKqEoaAw==}
+  magic-string@0.30.17:
+    resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -1312,7 +1312,7 @@ snapshots:
       '@formkit/core': 1.6.9
       '@formkit/utils': 1.6.9
 
-  '@formkit/pro@0.127.13(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)':
+  '@formkit/pro@0.127.14(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)':
     dependencies:
       '@formkit/core': 1.6.9
       '@formkit/drag-and-drop': 0.0.38
@@ -1433,7 +1433,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@rollup/pluginutils@5.1.3(rollup@4.28.1)':
+  '@rollup/pluginutils@5.1.4(rollup@4.28.1)':
     dependencies:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
@@ -1528,7 +1528,7 @@ snapshots:
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
       estree-walker: 2.0.2
-      magic-string: 0.30.15
+      magic-string: 0.30.17
       postcss: 8.4.49
       source-map-js: 1.2.1
 
@@ -1576,7 +1576,7 @@ snapshots:
 
   browserslist@4.24.3:
     dependencies:
-      caniuse-lite: 1.0.30001688
+      caniuse-lite: 1.0.30001689
       electron-to-chromium: 1.5.73
       node-releases: 2.0.19
       update-browserslist-db: 1.1.1(browserslist@4.24.3)
@@ -1596,7 +1596,7 @@ snapshots:
       pkg-types: 1.2.1
       rc9: 2.1.2
 
-  caniuse-lite@1.0.30001688: {}
+  caniuse-lite@1.0.30001689: {}
 
   chokidar@3.6.0:
     dependencies:
@@ -1801,7 +1801,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  magic-string@0.30.15:
+  magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -1988,20 +1988,20 @@ snapshots:
     dependencies:
       acorn: 8.14.0
       estree-walker: 3.0.3
-      magic-string: 0.30.15
+      magic-string: 0.30.17
       unplugin: 2.1.0
 
   unicorn-magic@0.1.0: {}
 
   unimport@3.14.5(rollup@4.28.1):
     dependencies:
-      '@rollup/pluginutils': 5.1.3(rollup@4.28.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.28.1)
       acorn: 8.14.0
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
       fast-glob: 3.3.2
       local-pkg: 0.5.1
-      magic-string: 0.30.15
+      magic-string: 0.30.17
       mlly: 1.7.3
       pathe: 1.1.2
       picomatch: 4.0.2
