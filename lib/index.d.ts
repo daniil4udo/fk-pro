@@ -1253,6 +1253,7 @@ export declare interface FormKitTogglebuttonsSlots<
             message: FormKitMessage;
         }
     >;
+    label: FormKitSlotData<Props, TogglebuttonsSlotData<Props>>;
 }
 
 /**
