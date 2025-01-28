@@ -33,14 +33,14 @@
         "@formkit/icons": "^1.6.9",
         "@formkit/inputs": "^1.6.9",
         "@formkit/nuxt": "^1.6.9",
-        "@formkit/pro": "^0.127.16",
+        "@formkit/pro": "^0.127.19",
         "@formkit/tempo": "^0.1.2",
         "@formkit/themes": "^1.6.9",
         "@formkit/utils": "^1.6.9",
         "@formkit/vue": "^1.6.9",
         "@vitejs/plugin-vue": "^5.2.1",
         "prettier": "^3.4.2",
-        "vite": "^6.0.7",
+        "vite": "^6.0.11",
         "vue": "^3.5.13"
     }
 }
