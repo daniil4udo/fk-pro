@@ -89,7 +89,7 @@ export const dropdown: FormKitProInput = {
                                                 tagWrapper(
                                                     tag(
                                                         $if(
-                                                            '$state.loading && $optionLoaderValues.includes($option.value) || $option.label === undefined',
+                                                            '$state.loading && $fns.hasOptionLoaderValue($option) || $option.label === undefined',
                                                             tagLoading(
                                                                 '$ui.isLoading.value'
                                                             ),

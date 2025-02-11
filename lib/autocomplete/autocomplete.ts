@@ -94,7 +94,7 @@ export const autocomplete: FormKitProInput = {
                         selection(
                             option(
                                 $if(
-                                    '$state.loading && $isLoadingOption',
+                                    '$state.loading && $fns.hasOptionLoaderValue($option)',
                                     optionLoading('$ui.isLoading.value'),
                                     '$option.label'
                                 )
