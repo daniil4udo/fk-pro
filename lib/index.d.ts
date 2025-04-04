@@ -409,6 +409,7 @@ export declare interface FormKitAutocompleteSlots<
     listitem: FormKitSlotData<Props, AutocompleteSlotData>;
     loadMore: FormKitSlotData<Props, AutocompleteSlotData>;
     emptyMessageInner: FormKitSlotData<Props, AutocompleteSlotData>;
+    loadMoreInner: FormKitSlotData<Props, AutocompleteSlotData>;
     closeIcon: FormKitSlotData<Props, AutocompleteSlotData>;
     selectIcon: FormKitSlotData<Props, AutocompleteSlotData>;
     selectedIcon: FormKitSlotData<
@@ -739,6 +740,7 @@ export declare interface FormKitDropdownSlots<
     listbox: FormKitSlotData<Props, DropdownSlotData>;
     listitem: FormKitSlotData<Props, DropdownSlotData>;
     loadMore: FormKitSlotData<Props, DropdownSlotData>;
+    loadMoreInner: FormKitSlotData<Props, DropdownSlotData>;
     emptyMessageInner: FormKitSlotData<Props, DropdownSlotData>;
     selectedIcon: FormKitSlotData<
         Props,
@@ -1168,6 +1170,7 @@ export declare interface FormKitTaglistSlots<
     listbox: FormKitSlotData<Props, TaglistSlotData>;
     listitem: FormKitSlotData<Props, TaglistSlotData>;
     loadMore: FormKitSlotData<Props, TaglistSlotData>;
+    loadMoreInner: FormKitSlotData<Props, TaglistSlotData>;
     emptyMessageInner: FormKitSlotData<Props, TaglistSlotData>;
     selectedIcon: FormKitSlotData<
         Props,
