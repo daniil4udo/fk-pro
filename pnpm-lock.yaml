@@ -27,8 +27,8 @@ importers:
         specifier: ^1.6.9
         version: 1.6.9(vite@6.2.5(jiti@2.4.2))(vue@3.5.13)
       '@formkit/pro':
-        specifier: ^0.127.22
-        version: 0.127.22(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)
+        specifier: ^0.127.23
+        version: 0.127.23(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)
       '@formkit/tempo':
         specifier: ^0.1.2
         version: 0.1.2
@@ -256,8 +256,8 @@ packages:
   '@formkit/observer@1.6.9':
     resolution: {integrity: sha512-p3MCmzp6jwzXIuV3gI9uTJTJl+sN5689C7qf7gdrS8jb1fbX1snKiTyWA8FXOrBXu+ne5z/sA/yBWqYFTSLy8A==}
 
-  '@formkit/pro@0.127.22':
-    resolution: {integrity: sha512-jHfWDQ5qxsI5ZaK/mZS8eIHuwCAmbA1XXlqxd7N8QxP1hlKzrCdncPVl4WSkJ/uqdgpaPGRXJ51BOmshtZ+TzQ==}
+  '@formkit/pro@0.127.23':
+    resolution: {integrity: sha512-rJOwY/0P4WBQPFmXSARoeyDsciqcY02rSPT+t/mmE9KwXXzWKAY2m7IYXs8tfBF7vZhgYZdUHIttX1o/l0tmtw==}
     peerDependencies:
       '@formkit/core': ^1.6.5
       '@formkit/inputs': ^1.6.5
@@ -1000,7 +1000,7 @@ snapshots:
       '@formkit/core': 1.6.9
       '@formkit/utils': 1.6.9
 
-  '@formkit/pro@0.127.22(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)':
+  '@formkit/pro@0.127.23(@formkit/core@1.6.9)(@formkit/inputs@1.6.9)(@formkit/utils@1.6.9)':
     dependencies:
       '@formkit/core': 1.6.9
       '@formkit/drag-and-drop': 0.0.38

@@ -33,7 +33,7 @@
         "@formkit/icons": "^1.6.9",
         "@formkit/inputs": "^1.6.9",
         "@formkit/nuxt": "^1.6.9",
-        "@formkit/pro": "^0.127.22",
+        "@formkit/pro": "^0.127.23",
         "@formkit/tempo": "^0.1.2",
         "@formkit/themes": "^1.6.9",
         "@formkit/utils": "^1.6.9",
